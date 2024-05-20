@@ -1,0 +1,56 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pages button {
+    border: none;
+    background-color: #E6618C;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.pages button a {
+    color: white;
+    text-decoration: none;
+}
+
+.pages button.active {
+    background-color: #6D5FB4;
+}
+
+.pages button:hover:not(.active) {
+    background-color: #2AA451;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

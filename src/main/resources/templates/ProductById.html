@@ -1,18 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #6D5FB4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #E6618C;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    a:hover {
+      background-color: #2AA451;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f4f4f4;
+    }
+  </style>
 </head>
 <body>
-<ul>
-  <li th:text="${product.id}"></li>
-  <li th:text="${product.name}"></li>
-  <li th:text="${product.description}"></li>
-  <li th:text="${product.thumbnail}"></li>
-  <li th:text="${product.price}"></li>
-  <li th:text="${product.rating}"></li>
-  <li th:text="${product.priceDiscount}"></li>
-</ul>
+<h1>Product detail</h1>
+<div class="container">
+  <ul>
+    <li th:text="${product.id}"></li>
+    <li th:text="${product.name}"></li>
+    <li th:text="${product.description}"></li>
+    <li> <img th:src="${product.thumbnail}" alt="Product Image"></li>
+    <li th:text="${product.price}"></li>
+    <li th:text="${product.rating}"></li>
+    <li th:text="${product.priceDiscount}"></li>
+  </ul>
+</div>
+<a class="back" th:href="@{/}">Back to home page</a>
 </body>
 </html>
